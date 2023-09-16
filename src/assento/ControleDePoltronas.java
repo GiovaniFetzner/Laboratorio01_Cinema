@@ -35,9 +35,10 @@ public class ControleDePoltronas {
 
     public String cancelarReserva(String linha, int coluna){
         String linhaUpperCase = linha.toUpperCase();
-        int poltrona = coluna-1;
+        coluna-=1;
 
         if(confereEntradaDeDados(coluna, linhaUpperCase)){
+            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = null;
             return "Reserva cancelada";
         } else{
             return ERRO;
@@ -51,7 +52,7 @@ public class ControleDePoltronas {
                     "L para linhas e 1 e 14 para colunas %n";*/
             return false;
         } else  {
-            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = "X ";
+            //assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = "X ";
             //return "Reservado";
             return true;
         }

@@ -37,5 +37,13 @@ public class Teste {
         System.out.println(assentos.cadastrarReserva(linha,coluna));
         mapaDeCadeiras.mostrarMapa(assentos);
 
+        System.out.print("Informe a linha do assento que você quer cancelar: ");
+        linha = leitura.next();
+        System.out.printf("%nInforme a coluna do assento que você quer cancelar:");
+        coluna = leitura.nextInt();
+        System.out.println(assentos.cancelarReserva(linha,coluna));
+        mapaDeCadeiras.mostrarMapa(assentos);
+
+
     }
 }
