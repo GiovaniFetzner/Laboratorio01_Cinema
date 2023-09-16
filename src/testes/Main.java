@@ -42,7 +42,7 @@ public class Main {
          * */
 
         for (int i = 0; i < assentos.length; i++) {
-            System.out.print(alfabeto.charAt(i) + " ");
+            System.out.print(alfabeto.charAt(i) + "| ");
             for (int j = 0; j < assentos[0].length; j++) {
                 if (assentos[i][j] != null) System.out.print(assentos[i][j] + " ");
                 else {
