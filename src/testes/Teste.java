@@ -1,12 +1,13 @@
 package testes;
-import assento.Assentos;
+import assento.ControleDePoltronas;
 import assento.Mapa;
 
 public class Teste {
     public static void main(String[] args) {
-        Assentos assentos = new Assentos();
+        ControleDePoltronas assentos = new ControleDePoltronas();
+        Mapa mapaDeCadeiras = new Mapa();
 
-        String [][] provisorio = assentos.getAssentos();
+        /*String [][] provisorio = assentos.getAssentos();
 
         for (int i = 0; i < provisorio.length; i++) {
             System.out.print(assentos.getCharAtAlfabeto(i) + " ");
@@ -18,12 +19,10 @@ public class Teste {
                 }
             }
             System.out.println();
-        }
-
+        }*/
 
         System.out.println("Teste classe mapa ");
 
-        Mapa mapaDeCadeiras = new Mapa();
         mapaDeCadeiras.mostrarMapa();
 
     }

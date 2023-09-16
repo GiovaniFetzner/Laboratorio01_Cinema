@@ -1,6 +1,6 @@
 package assento;
 
-public class Assentos {
+public class ControleDePoltronas {
 
     String[][] assentos = new String[12][14];
     final String ALFABETO = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -12,7 +12,7 @@ public class Assentos {
         int poltrona = coluna-1;
 
         if(confereEntradaDeDados(coluna, linhaUpperCase)){
-            return "Reservado";
+            return "X ";
         } else {
             return ERRO;
         }

@@ -1,7 +1,7 @@
 package assento;
 
 public class Mapa {
-    Assentos assentos = new Assentos();
+    ControleDePoltronas assentos = new ControleDePoltronas();
 
     String [][] provisorio = assentos.getAssentos();
 
