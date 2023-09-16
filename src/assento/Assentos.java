@@ -42,4 +42,21 @@ public class Assentos {
         }
     }
 
+    public int getLengthLinha(){
+        return assentos.length;
+    }
+
+    public int getLengthColuna(){
+        return assentos[0].length;
+    }
+
+    public String[][] getAssentos(){
+        return assentos;
+    }
+
+    public char getCharAtAlfabeto(int index){
+        return ALFABETO.charAt(index);
+    }
+
+
 }
