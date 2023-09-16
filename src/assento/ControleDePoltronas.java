@@ -7,12 +7,27 @@ public class ControleDePoltronas {
     final String ERRO = "E R R O !! %nInforme valores válidos, entre A e " +
             "L para linhas e 1 e 14 para colunas %n";
 
+    public ControleDePoltronas() {
+        for (int i = 0; i < assentos.length; i++) {
+            System.out.print(ALFABETO.charAt(i) + "| ");
+            for (int j = 0; j < assentos[0].length; j++) {
+                if (assentos[i][j] != null) System.out.print(assentos[i][j] + " ");
+                else {
+                    assentos[i][j] = Integer.toString(j+1);
+                    System.out.print(assentos[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public String cadastrarReserva(String linha, int coluna){
         String linhaUpperCase = linha.toUpperCase();
-        int poltrona = coluna-1;
+        coluna -= 1;
 
         if(confereEntradaDeDados(coluna, linhaUpperCase)){
-            return "X ";
+            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = "X ";
+            return "Reservado";
         } else {
             return ERRO;
         }
@@ -23,7 +38,7 @@ public class ControleDePoltronas {
         int poltrona = coluna-1;
 
         if(confereEntradaDeDados(coluna, linhaUpperCase)){
-            return null;
+            return "Reserva cancelada";
         } else{
             return ERRO;
         }
@@ -36,7 +51,7 @@ public class ControleDePoltronas {
                     "L para linhas e 1 e 14 para colunas %n";*/
             return false;
         } else  {
-            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = "Reservado";
+            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = "X ";
             //return "Reservado";
             return true;
         }
