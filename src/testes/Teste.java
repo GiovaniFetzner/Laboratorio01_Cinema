@@ -26,10 +26,7 @@ public class Teste {
             }
             System.out.println();
         }*/
-
-        System.out.println("Teste classe mapa ");
         mapaDeCadeiras.mostrarMapa(assentos);
-
         System.out.print("Informe a linha que você deseja: ");
         linha = leitura.next();
         System.out.printf("%nInforme a coluna que você deseja :");

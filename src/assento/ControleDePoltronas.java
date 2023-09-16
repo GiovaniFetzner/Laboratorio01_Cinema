@@ -8,18 +8,8 @@ public class ControleDePoltronas {
             "L para linhas e 1 e 14 para colunas %n";
 
     public ControleDePoltronas() {
-        for (int i = 0; i < assentos.length; i++) {
-            System.out.print(ALFABETO.charAt(i) + "| ");
-            for (int j = 0; j < assentos[0].length; j++) {
-                if (assentos[i][j] != null) System.out.print(assentos[i][j] + " ");
-                else {
-                    assentos[i][j] = Integer.toString(j+1);
-                    System.out.print(assentos[i][j] + " ");
-                }
-            }
-            System.out.println();
-        }
-    }
+
+}
 
     public String cadastrarReserva(String linha, int coluna){
         String linhaUpperCase = linha.toUpperCase();
