@@ -46,7 +46,7 @@ public class ControleDePoltronas {
         coluna-=1;
 
         if(confereEntradaDeDados(coluna, linhaUpperCase)){
-            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = null;
+            assentos[ALFABETO.indexOf(linhaUpperCase.charAt(0))][coluna] = Integer.toString(coluna + 1);
             return "Reserva cancelada";
         } else{
             return ERRO;
