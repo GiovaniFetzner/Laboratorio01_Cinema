@@ -6,10 +6,26 @@ public class ControleDePoltronas {
     final String ALFABETO = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     final String ERRO = "E R R O !! %nInforme valores válidos, entre A e " +
             "L para linhas e 1 e 14 para colunas %n";
+    final int QUANTIDADE_TOTAL_POLTRONAS= 168;
+    int quantidadeDeReservas = 0;
+    int quantidadeDePoltronasLivre = QUANTIDADE_TOTAL_POLTRONAS - quantidadeDeReservas;
 
     public ControleDePoltronas() {
 
 }
+
+    public int getQuantidadeDeReservas() {
+        quantidadeDeReservas = 0;
+        for (int i = 0; i < assentos.length; i++) {
+            for (int j = 0; j < assentos[i].length; j++) {
+                // Verifique se o elemento atual é nulo
+                if (assentos[i][j].equals("X ")) {
+                    quantidadeDeReservas++;
+                }
+            }
+        }
+        return quantidadeDeReservas;
+    }
 
     public String cadastrarReserva(String linha, int coluna){
         String linhaUpperCase = linha.toUpperCase();
@@ -64,5 +80,19 @@ public class ControleDePoltronas {
         return ALFABETO.charAt(index);
     }
 
+    public int getQUANTIDADE_TOTAL_POLTRONAS() {
+        return QUANTIDADE_TOTAL_POLTRONAS;
+    }
 
+    public void setQuantidadeDeReservas(int quantidadeDeReservas) {
+        this.quantidadeDeReservas = quantidadeDeReservas;
+    }
+
+    public int getQuantidadeDePoltronasLivre() {
+        return quantidadeDePoltronasLivre;
+    }
+
+    public void setQuantidadeDePoltronasLivre(int quantidadeDePoltronasLivre) {
+        this.quantidadeDePoltronasLivre = quantidadeDePoltronasLivre;
+    }
 }
