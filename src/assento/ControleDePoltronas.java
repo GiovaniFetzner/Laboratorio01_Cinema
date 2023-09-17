@@ -8,7 +8,7 @@ public class ControleDePoltronas {
             "L para linhas e 1 e 14 para colunas %n";
     final int QUANTIDADE_TOTAL_POLTRONAS= 168;
     int quantidadeDeReservas = 0;
-    int quantidadeDePoltronasLivre = QUANTIDADE_TOTAL_POLTRONAS - quantidadeDeReservas;
+    int quantidadeDePoltronasLivres = QUANTIDADE_TOTAL_POLTRONAS - quantidadeDeReservas;
 
     public ControleDePoltronas() {
 
@@ -24,6 +24,8 @@ public class ControleDePoltronas {
                 }
             }
         }
+        //quantidadeDePoltronasLivre = QUANTIDADE_TOTAL_POLTRONAS - quantidadeDeReservas;
+        
         return quantidadeDeReservas;
     }
 
@@ -88,11 +90,11 @@ public class ControleDePoltronas {
         this.quantidadeDeReservas = quantidadeDeReservas;
     }
 
-    public int getQuantidadeDePoltronasLivre() {
-        return quantidadeDePoltronasLivre;
+    public int getQuantidadeDePoltronasLivres() {
+        return quantidadeDePoltronasLivres = QUANTIDADE_TOTAL_POLTRONAS -quantidadeDeReservas;
     }
 
-    public void setQuantidadeDePoltronasLivre(int quantidadeDePoltronasLivre) {
-        this.quantidadeDePoltronasLivre = quantidadeDePoltronasLivre;
+    public void setQuantidadeDePoltronasLivres(int quantidadeDePoltronasLivres) {
+        this.quantidadeDePoltronasLivres = quantidadeDePoltronasLivres;
     }
 }

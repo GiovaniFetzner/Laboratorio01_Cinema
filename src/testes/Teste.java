@@ -27,12 +27,19 @@ public class Teste {
             System.out.println();
         }*/
         mapaDeCadeiras.mostrarMapa(assentos);
-        System.out.print("Informe a linha que você deseja: ");
+        System.out.print("Informe a linha que você deseja fazer a reserva: ");
         linha = leitura.next();
-        System.out.printf("%nInforme a coluna que você deseja :");
+        System.out.printf("%nInforme a coluna que você deseja fazer a reserva:");
         coluna = leitura.nextInt();
         System.out.println(assentos.cadastrarReserva(linha,coluna));
         mapaDeCadeiras.mostrarMapa(assentos);
+
+        System.out.print("Quantidade de reservas: ");
+        System.out.println(assentos.getQuantidadeDeReservas());
+        System.out.print("Quantidade de poltronas livres: ");
+        System.out.println(assentos.getQuantidadeDePoltronasLivres());
+        System.out.print("Quantidade de total: ");
+        System.out.println(assentos.getQUANTIDADE_TOTAL_POLTRONAS());
 
         System.out.print("Informe a linha do assento que você quer cancelar: ");
         linha = leitura.next();
@@ -41,6 +48,12 @@ public class Teste {
         System.out.println(assentos.cancelarReserva(linha,coluna));
         mapaDeCadeiras.mostrarMapa(assentos);
 
+        System.out.print("Quantidade de reservas: ");
+        System.out.println(assentos.getQuantidadeDeReservas());
+        System.out.print("Quantidade de poltronas livres: ");
+        System.out.println(assentos.getQuantidadeDePoltronasLivres());
+        System.out.print("Quantidade de total: ");
+        System.out.println(assentos.getQUANTIDADE_TOTAL_POLTRONAS());
 
     }
 }
