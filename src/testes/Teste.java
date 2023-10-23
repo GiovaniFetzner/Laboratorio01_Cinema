@@ -65,8 +65,6 @@ public class Teste {
             else {
                 System.out.println("Nenhuma escolha valida\nTente novamente\n");
             }
-
-            // Ve se foi
         }
 
     }
